@@ -27,7 +27,6 @@ for hour_data in weather_slice:
     if int(condition_code) < 700:
         will_rain = True
 
-print(will_rain)
 if will_rain:
     client = Client(config.twilio_account_sid, config.twilio_auth_token)
     message = client.messages \
